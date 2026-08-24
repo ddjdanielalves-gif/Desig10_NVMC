@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1"
+    >
+
+    <title>
+        Designações — Reunião de Meio de Semana
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+
+<header>
+    <h1>
+        Designações · Reunião de Meio de Semana
+    </h1>
+
+    <span>
+        DOCX · equilíbrio mensal · revisão manual
+    </span>
+
+    <span class="credit credit-header">
+        Daniel Alves ®
+    </span>
+</header>
+
+<main>
+
+    <div id="msg"></div>
+
+    <section class="toolbar">
+
+        <label class="upload">
+
+            <input
+                id="file"
+                type="file"
+                accept=".docx"
+            >
+
+            Selecionar programação .docx
+
+        </label>
+
+        <button id="auto">
+            Preencher tudo
+        </button>
+
+        <button id="rebalance">
+            Reorganizar tudo
+        </button>
+
+        <button id="export">
+            Baixar DOCX preenchido
+        </button>
+
+    </section>
+
+    <div class="layout">
+
+        <aside>
+
+            <section class="card">
+
+                <h2>
+                    Lista de irmãos
+                </h2>
+
+                <label>
+                    Categoria
+
+                    <select id="memberType">
+
+                        <option value="elder">
+                            Ancião
+                        </option>
+
+                        <option value="servo">
+                            Servo ministerial
+                        </option>
+
+                    </select>
+                </label>
+
+                <label>
+                    Nome
+
+                    <input
+                        id="memberName"
+                        placeholder="Nome completo"
+                    >
+                </label>
+
+                <button id="addMember">
+                    + Adicionar
+                </button>
+
+                <div id="members"></div>
+
+            </section>
+
+
+            <section class="card">
+
+                <h2>
+                    Indisponibilidade
+                </h2>
+
+                <label>
+                    Pessoa
+
+                    <select id="unavName"></select>
+                </label>
+
+                <label>
+                    Período
+
+                    <select id="unavScope">
+
+                        <option value="month">
+                            Mês inteiro
+                        </option>
+
+                        <option value="1">
+                            1 semana
+                        </option>
+
+                        <option value="2">
+                            2 semanas
+                        </option>
+
+                        <option value="3">
+                            3 semanas
+                        </option>
+
+                    </select>
+                </label>
+
+                <label
+                    id="weekWrap"
+                    class="hidden"
+                >
+                    Semana inicial
+
+                    <select id="unavWeek"></select>
+                </label>
+
+                <button id="addUnav">
+                    + Adicionar
+                </button>
+
+                <div id="unavs"></div>
+
+            </section>
+
+
+            <section class="card">
+
+                <h2>
+                    Sem reunião
+                </h2>
+
+                <label>
+                    Início
+
+                    <input
+                        id="sdStart"
+                        type="date"
+                    >
+                </label>
+
+                <label>
+                    Fim
+
+                    <input
+                        id="sdEnd"
+                        type="date"
+                    >
+                </label>
+
+                <label>
+                    Motivo
+
+                    <select id="sdLabel">
+
+                        <option>
+                            Semana de celebração
+                        </option>
+
+                        <option>
+                            Congresso
+                        </option>
+
+                        <option>
+                            Assembleia
+                        </option>
+
+                    </select>
+
+                </label>
+
+                <button id="addSpecial">
+                    + Adicionar
+                </button>
+
+                <div id="specials"></div>
+
+            </section>
+
+
+            <section class="card">
+
+                <h2>
+                    Equilíbrio mensal
+                </h2>
+
+                <div id="balance"></div>
+
+            </section>
+
+        </aside>
+
+
+        <section>
+
+            <div id="weeks"></div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="credit credit-footer">
+    Daniel Alves ®
+</footer>
+
+<script
+    src="/static/app.js"
+></script>
+
+</body>
+
+</html>

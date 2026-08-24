@@ -1,0 +1,6 @@
+{
+  "name": "Designações · Reunião de Meio de Semana",
+  "description": "Ferramenta de organização e preenchimento de designações da Reunião de Meio de Semana em arquivos DOCX com equilíbrio mensal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
